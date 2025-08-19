@@ -21,7 +21,7 @@ const projects: Project[] = [
     id: 1,
     title: "Food Delivery App",
     description: "Huber Eats is a modern Food Delivery UI Kit with 60+ clean and user-friendly screens for restaurants, groceries, and delivery services.",
-    image: "huber_eats.png",
+    image: "/huber_eats.png",
     category: "Flutter",
     technologies: ["Flutter", "Dart", "Firebase"],
     links: { 
@@ -33,7 +33,7 @@ const projects: Project[] = [
     id: 2,
     title: "BeautyMart",
     description: "BeautyMart UI Kit is a stylish e-commerce App for beauty and cosmetics apps, offering product discovery, detailed product pages, reviews, seamless checkout, and order management with a clean pink-accented design.",
-    image: "beauty_mart.png",
+    image: "/beauty_mart.png",
     category: "FlutterFlow",
     technologies: ["Flutter", "Dart", "Firebase"],
     links: { 

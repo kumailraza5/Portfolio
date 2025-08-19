@@ -31,7 +31,9 @@ export default defineConfig({
     rollupOptions: {
       input: path.resolve(process.cwd(), "index.html"), // ✅ entry
     },
+    assetsDir: "assets",
   },
+  publicDir: path.resolve(process.cwd(), "client", "public"),
   server: {
     fs: {
       strict: true,

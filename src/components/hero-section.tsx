@@ -42,7 +42,7 @@ export default function HeroSection() {
             data-testid="hero-avatar"
           >
             <img
-              src="dp.jpg"
+              src="/dp.jpg"
               alt="Professional headshot"
               className="w-full h-full object-cover"
             />
