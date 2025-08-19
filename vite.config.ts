@@ -18,15 +18,19 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+      "@": path.resolve(process.cwd(), "src"),   // 🔥 direct src use karo
+      "@shared": path.resolve(process.cwd(), "shared"),
+      "@assets": path.resolve(process.cwd(), "attached_assets"),
     },
   },
-  root: path.resolve(import.meta.dirname, "client"),
+  root: process.cwd(), // ✅ root folder, client hatado
+  base: "./",          // ✅ GitHub Pages ke liye relative path
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: path.resolve(process.cwd(), "dist"),  // build output
     emptyOutDir: true,
+    rollupOptions: {
+      input: path.resolve(process.cwd(), "index.html"), // ✅ entry
+    },
   },
   server: {
     fs: {
