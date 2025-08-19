@@ -23,8 +23,11 @@ const projects: Project[] = [
     description: "Huber Eats is a modern Food Delivery UI Kit with 60+ clean and user-friendly screens for restaurants, groceries, and delivery services.",
     image: "huber_eats.png",
     category: "Flutter",
-    technologies: ["Flutter", "Dart", "Firbase"],
-    links: { github: "#", demo: "#" },
+    technologies: ["Flutter", "Dart", "Firebase"],
+    links: { 
+      github: "https://github.com/kumail-raza/huber-eats", 
+      demo: "https://your-demo-link.com/huber-eats" 
+    },
   },
   {
     id: 2,
@@ -32,8 +35,11 @@ const projects: Project[] = [
     description: "BeautyMart UI Kit is a stylish e-commerce App for beauty and cosmetics apps, offering product discovery, detailed product pages, reviews, seamless checkout, and order management with a clean pink-accented design.",
     image: "beauty_mart.png",
     category: "FlutterFlow",
-    technologies: ["Flutter", "Dart", "Firbase"],
-    links: { view: "#", demo: "#" },
+    technologies: ["Flutter", "Dart", "Firebase"],
+    links: { 
+      view: "https://your-flutterflow.com/beauty-mart", 
+      demo: "https://your-demo-link.com/beauty-mart" 
+    },
   },
   
 ];
@@ -163,6 +169,8 @@ export default function PortfolioSection() {
                     {project.links.github && (
                       <motion.a
                         href={project.links.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
                         whileHover={{ scale: 1.1 }}
                         data-testid={`project-github-${project.id}`}
@@ -173,6 +181,8 @@ export default function PortfolioSection() {
                     {project.links.demo && (
                       <motion.a
                         href={project.links.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
                         whileHover={{ scale: 1.1 }}
                         data-testid={`project-demo-${project.id}`}
@@ -183,6 +193,8 @@ export default function PortfolioSection() {
                     {project.links.view && (
                       <motion.a
                         href={project.links.view}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
                         whileHover={{ scale: 1.1 }}
                         data-testid={`project-view-${project.id}`}

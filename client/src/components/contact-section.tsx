@@ -97,10 +97,10 @@ export default function ContactSection() {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", color: "hover:bg-blue-600", testId: "social-linkedin" },
-    { icon: Github, href: "#", color: "hover:bg-gray-600", testId: "social-github" },
-    { icon: Twitter, href: "#", color: "hover:bg-blue-400", testId: "social-twitter" },
-    { icon: Instagram, href: "#", color: "hover:bg-red-600", testId: "social-instagram" },
+    { icon: Linkedin, href: "https://linkedin.com/in/kumail-raza", color: "hover:bg-blue-600", testId: "social-linkedin" },
+    { icon: Github, href: "https://github.com/kumail-raza", color: "hover:bg-gray-600", testId: "social-github" },
+    { icon: Twitter, href: "https://twitter.com/kumail_raza", color: "hover:bg-blue-400", testId: "social-twitter" },
+    { icon: Instagram, href: "https://instagram.com/kumail_raza", color: "hover:bg-red-600", testId: "social-instagram" },
   ];
 
   return (
@@ -168,6 +168,8 @@ export default function ContactSection() {
                     <motion.a
                       key={index}
                       href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`w-12 h-12 bg-gray-700 ${social.color} rounded-lg flex items-center justify-center transition-colors duration-300`}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Download } from "lucide-react";
 
 interface CounterProps {
   end: number;
@@ -34,6 +35,13 @@ function Counter({ end, duration = 2 }: CounterProps) {
 
 export default function AboutSection() {
   const [isVisible, setIsVisible] = useState(false);
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/Kumail_Raza_CV.pdf';
+    link.download = 'Kumail_Raza_CV.pdf';
+    link.click();
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -121,6 +129,25 @@ export default function AboutSection() {
                   </div>
                   <div className="text-gray-400">Clients</div>
                 </div>
+              </motion.div>
+
+              {/* Download CV Button */}
+              <motion.div
+                className="mt-8"
+                initial={{ opacity: 0, y: 30 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 1.0 }}
+              >
+                <motion.button
+                  onClick={handleDownloadCV}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  data-testid="button-download-cv-about"
+                >
+                  <Download size={20} />
+                  Download CV
+                </motion.button>
               </motion.div>
             </motion.div>
           </div>

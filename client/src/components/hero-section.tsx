@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Download } from "lucide-react";
 
 export default function HeroSection() {
   const handleNavClick = (href: string) => {
@@ -7,6 +7,13 @@ export default function HeroSection() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/Kumail_Raza_CV.pdf';
+    link.download = 'Kumail_Raza_CV.pdf';
+    link.click();
   };
 
   return (
@@ -75,6 +82,16 @@ export default function HeroSection() {
               data-testid="button-view-work"
             >
               View My Work
+            </motion.button>
+            <motion.button
+              onClick={handleDownloadCV}
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              data-testid="button-download-cv"
+            >
+              <Download size={20} />
+              Download CV
             </motion.button>
             <motion.button
               onClick={() => handleNavClick("#contact")}
