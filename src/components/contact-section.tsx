@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Mail, Phone, MapPin, Linkedin, Github, Twitter, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github, Instagram, Facebook} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -97,11 +97,12 @@ export default function ContactSection() {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "https://linkedin.com/in/kumail-raza", color: "hover:bg-blue-600", testId: "social-linkedin" },
-    { icon: Github, href: "https://github.com/kumail-raza", color: "hover:bg-gray-600", testId: "social-github" },
-    { icon: Twitter, href: "https://twitter.com/kumail_raza", color: "hover:bg-blue-400", testId: "social-twitter" },
-    { icon: Instagram, href: "https://instagram.com/kumail_raza", color: "hover:bg-red-600", testId: "social-instagram" },
-  ];
+  { icon: Linkedin, href: "https://www.linkedin.com/in/kumail-raza-4440a9261/?trk=opento_sprofile_topcard", color: "hover:bg-blue-600", testId: "social-linkedin" },
+  { icon: Github, href: "https://github.com/kumailraza5", color: "hover:bg-gray-600", testId: "social-github" },
+{ icon: Facebook, href: "https://www.facebook.com/share/14Eoi8unnQX/?mibextid=wwXIfr", color: "hover:bg-blue-600", testId: "social-facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/kumail___r_a_z_a?igsh=Z2JydmNxcTYzazFz&utm_source=qr", color: "hover:bg-red-600", testId: "social-instagram" },
+];
+
 
   return (
     <section id="contact" className="py-20 bg-gray-900">

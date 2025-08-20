@@ -26,7 +26,7 @@ const projects: Project[] = [
     technologies: ["Flutter", "Dart", "Firebase"],
     links: { 
       github: "https://github.com/kumail-raza/huber-eats", 
-      demo: "https://your-demo-link.com/huber-eats" 
+      view: "https://your-demo-link.com/huber-eats" 
     },
   },
   {
@@ -37,8 +37,8 @@ const projects: Project[] = [
     category: "FlutterFlow",
     technologies: ["Flutter", "Dart", "Firebase"],
     links: { 
-      view: "https://your-flutterflow.com/beauty-mart", 
-      demo: "https://your-demo-link.com/beauty-mart" 
+      github: "https://your-flutterflow.com/beauty-mart", 
+      view: "https://your-demo-link.com/beauty-mart" 
     },
   },
   
