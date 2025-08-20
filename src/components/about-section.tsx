@@ -38,8 +38,8 @@ export default function AboutSection() {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/Kumail_Raza_CV.pdf';
-    link.download = 'Kumail_Raza_CV.pdf';
+    link.href = '/MUHAMMAD-KUMAIL-RAZA-FlowCV-Resume-20250820.pdf';
+    link.download = 'MUHAMMAD-KUMAIL-RAZA-FlowCV-Resume-20250820.pdf';
     link.click();
   };
 
